@@ -1,46 +1,104 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
 
+import { useRouter } from "next/router";
 const Footer = () => {
+    const router = useRouter()
     return(
-        <div>
-            Footer
-        </div>
-    )
-    // if (!content) return <LoadingComponent />
-    // return (
-    //     <div id="footer">
-    //         {isDesktop && <Row>
-    //             {Object.values(content.footer).map((val, index) => (
-    //                 <Col key={index} className='footerCols' xs={12} sm={6} md={4} lg={2}>
-    //                     <h6 >{val[0].text}</h6>
-    //                     {val.slice(1).map((item) => (
-    //                         item.url ? <p key={item.idMenu}>
-    //                             <Link
-    //                                 href={item.url.includes("index") ?
-    //                                     item.url.replace("/index.html", "") :
-    //                                     item.url.replace(".html", "")}>
-    //                                 {item.text}
-    //                             </Link>
-    //                         </p>
-    //                             : <p key={item.idMenu}>{item.text}</p>
-    //                     ))}
-    //                 </Col>
-    //             ))}
-    //         </Row>}
+        <footer className="text-white bg-dark">
+            <section>
+                <div className="container">
 
-    //         <Row className='footerDetails'>
-    //             <h6>{content.footerContent.businessName}</h6>
-    //             <p>{content.footerContent.addressLine1}</p>
-    //             <p>{content.footerContent.addressLine2}</p>
-    //             <p>Toll Free: {content.footerContent.phoneTollFree} Voice:{content.footerContent.phoneVoice} Text:{content.footerContent.phoneText} Fax:{content.footerContent.phoneFax}</p>
-    //             <p>Email: <a href="/inquiry01.html"> Info@sunspotvacationrentals.com</a> Website: <a href={content.footerContent.websiteURL}>{content.footerContent.websiteDisplay}</a></p>
-    //             <p><a href={content.footerContent.websiteURL}>Go to Mobile Website</a></p>
-    //             <p><a href={content.footerContent.designerURLActual}>{content.footerContent.designerURLDisplay}</a></p>
-    //             <p>4900 Copyright Ⓒ {(new Date(content.footerContent.copyrightStart)).getFullYear()}-{(new Date()).getFullYear()}</p>
-    //         </Row>
-    //     </div>
-    // )
+                    <div className="row g-md-5">
+                        <div className="col-md-3 col-xs-12">
+                            <div className="row">
+
+                                <div className="col">
+                                    <h5 className='my-4'>About Us</h5>
+
+                                    <p><small>We are a UK based healthcare social enterprise in London supporting family’s psychological, physical, financial, legal, and housing well-being. It was founded in 2007. We offer Counseling, Therapy and Well-being Associated services globally.</small></p>
+                                    <div>
+                                        <a href="https://www.facebook.com/HealthCityandTwinBrain"><i className="fab fa-facebook-f"></i></a>
+                                        <a><i className="fab fa-twitter"></i></a>
+                                        <a><i className="fab fa-pinterest-p"></i></a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="col-md-3 col-xs-12">
+                            <div className="row">
+                                <div className="col">
+                                    <h5 className='my-4'>Services</h5>
+
+                                    <ul className='footer-links'>
+                                        <li><Link href="/services/free-self-assessment">Free Self-Assessment</Link></li>
+                                        <li><Link href="/services/paid-assessment">Paid Assessment</Link></li>
+                                        <li><a href="https://cbt.healthbj-uk.org" target="_blank">CBT Service</a></li>
+                                        <li><a href="https://counselling.healthbj-uk.org" target="_blank">Counselling Service</a></li>
+                                        <li><a href="https://psychassessment.twinbrain.org/" target="_blank">Psychological Assessment</a></li>
+                                        <li><a href="https://eap.healthbj-uk.org/" target="_blank">Employee Assistance Programme</a></li>
+                                        <li><a href="http://search.healthbj-uk.org/" target="_blank">Search Directory</a></li>
+
+                                    </ul>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div className="col-md-3 col-xs-12">
+                            <div className="row g-0">
+                                <div className="col">
+                                    <h5 className='my-4'>Quick Links</h5>
+
+                                    <ul  className='footer-links'>
+                                        <li><Link href="/book-now">Book An Appointment</Link></li>
+                                        <li><Link href="/books-to-read">Books To Read</Link></li>
+                                        <li><Link href="/keeping-you-safe">Keep You Safe</Link></li>
+                                        <li><Link href="/my-account">My Account</Link></li>
+                                        <li><Link href="/disclaimer">Disclaimer</Link></li>
+                                        <li><Link href="/term-and-conditions">Terms and Conditions</Link></li>
+                                    </ul>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="col-md-3 col-xs-12">
+                            <div className="row g-0">
+                                <div className="col">
+
+                                    <h5 className='my-4'>Contact Us</h5>
+                                    <p>Twin Brain Davenport House</p>
+                                    <p>16 Pepper Street, Canary Wharf, London, E14 9RP, United Kingdom</p>
+
+                                    <a href="tel:0333 800 3006"className={`btn btn-outline-primary `}>Call Us:  0333 800 3006 </a>
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className='bg-black'>
+                <div className="container p-3">
+                    <div className="row">
+                        <div className="col text-center">
+                        &copy; {(new Date()).getFullYear()} Twin Brain. All rights reserved.
+              </div>
+                    </div>
+                </div>
+            </section>
+        </footer >
+    )
 }
 
 export default Footer;

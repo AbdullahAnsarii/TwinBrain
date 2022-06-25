@@ -5,7 +5,9 @@ import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <></>
+    <>
+    <h1 style={{margin: 200, textAlign: 'center'}}>Content will come here</h1>
+    </>
     // <div className={styles.container}>
     //   <Head>
     //     <title>Create Next App</title>
