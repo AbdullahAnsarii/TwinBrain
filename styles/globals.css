@@ -1,3 +1,6 @@
+:root{
+  --bs-primary: #082366 !important;
+}
 html,
 body {
   padding: 0;
@@ -13,4 +16,46 @@ a {
 
 * {
   box-sizing: border-box;
+}
+/*Header styles */
+#header{
+  white-space: nowrap;
+  background: var(--bs-primary);
+}
+#header a{
+  color: white;
+}
+
+#header a:hover{
+  color: var(--bs-info);
+}
+.navbar-nav{
+  align-items: center;
+}
+#header-dropdown-items {
+  color: var(--bs-primary) !important;
+}
+#header-dropdown-items:hover {
+  background: var(--bs-primary) !important;
+  color: white !important;
+}
+
+/* Footer styles */
+
+.footer-links {
+  list-style-type: '⇒';
+  margin: 1ch;
+  padding: 0;
+
+}
+.footer-links a {
+  text-decoration: none;
+  color: white;
+}
+.footer-links a:hover {
+  /* text-decoration: none; */
+  color: var(--bs-info);
+}
+.footer-links li {
+  padding-inline-start: 1ch;
 }
