@@ -1,5 +1,5 @@
 export const navbarItems: { text: string, url: string, subItems: { text: string, url: string }[] }[] = [
-    { text: "Home", url: "/", subItems: [] },
+    // { text: "Home", url: "/", subItems: [] },
     { text: "About Us", url: "/about-us", subItems: [] },
     { text: "Contact", url: "/contact-us", subItems: [] },
     { text: "Book Now", url: "/services/paid-assessment", subItems: [] },
@@ -12,7 +12,6 @@ export const navbarItems: { text: string, url: string, subItems: { text: string,
         ]
     },
     { text: "Assessors", url: "/assessors", subItems: [] },
-    { text: "logo", url: "/", subItems: [] },
     { text: "Books To Read", url: "/books-to-read", subItems: [] },
     { text: "Keep You Safe", url: "/keeping-you-safe", subItems: [] },
     { text: "Feedback", url: "/feedback", subItems: [] },

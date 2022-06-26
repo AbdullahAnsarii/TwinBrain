@@ -1,12 +1,42 @@
+import { Carousel } from 'antd'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { Button } from 'react-bootstrap'
 import styles from '../styles/Home.module.css'
+import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
+  const router = useRouter();
   return (
     <>
-    <h1 style={{margin: 200, textAlign: 'center'}}>Content will come here</h1>
+      <Carousel effect='fade' autoplay>
+        <div>
+          <div className={styles.contentStyle}>
+            <h2 style={{ fontSize: '3vw' }}><b>Leading the way in<br />medical excellence</b></h2>
+            <p style={{ fontSize: '1vw' }}><b>Earth greater grass for good. Place for divide evening yielding<br />them that. Creeping beginning over gathered brought.</b></p>
+            <Button style={{color: 'white'}} onClick={() => router.push("/services")}>Browse Services</Button>
+          </div>
+          <img width="100%" src="/assets/images/home-1.jpg"></img>
+        </div>
+        <div>
+          <div className={styles.contentStyle}>
+            <h2 style={{ fontSize: '3vw' }}><b>What are you<br />looking for?</b></h2>
+            <p style={{ fontSize: '1vw' }}><b>I Like to Complete a Free Anxiety and Depression/Low Mood<br />Questionnaire to See How I am Feeling.</b></p>
+            <Button onClick={() => router.push("/services/free-self-assessment")}>Take Questionnaire</Button>
+          </div>
+          <img width="100%" src="/assets/images/home-2.png"></img>
+        </div>
+        <div>
+        <div className={styles.contentStyle}>
+            <h2 style={{ fontSize: '3vw' }}><b>About Us</b></h2>
+            <p style={{ fontSize: '1vw' }}><b><strong>TwinBrain Ltd</strong>, owner of TwinBrain App, is a&nbsp;UK&nbsp;based healthcare in London<br/>that operates on social enterprise principles. It was registered 30 April 2020<br/>with Companies House  number 12580210.</b></p>
+            <Button onClick={() => router.push("/about-us")}>Find Out More</Button>
+          </div>
+          <img width="100%" src="/assets/images/home-3.png"></img>
+        </div>
+      </Carousel>
+      <h1 style={{ margin: 200, textAlign: 'center' }}>Further content will come here</h1>
     </>
     // <div className={styles.container}>
     //   <Head>
