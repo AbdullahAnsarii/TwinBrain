@@ -2,28 +2,22 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
 
 import { useRouter } from "next/router";
+import { CaretRightFilled, EnvironmentFilled, FacebookFilled, LinkedinFilled, PhoneFilled, TwitterOutlined } from '@ant-design/icons';
 const Footer = () => {
     const router = useRouter()
     return(
-        <footer className="text-white bg-dark">
+        <footer style={{background: "#e6e6e6", bottom: 0}}>
             <section>
-                <div className="container">
+                <div className="container text-dark">
 
                     <div className="row g-md-5">
                         <div className="col-md-3 col-xs-12">
                             <div className="row">
 
-                                <div className="col">
-                                    <h5 className='my-4'>About Us</h5>
+                                <div className="col" >
+                                <img width="60%" src="/assets/images/logo.png" />
 
                                     <p><small>We are a UK based healthcare social enterprise in London supporting family’s psychological, physical, financial, legal, and housing well-being. It was founded in 2007. We offer Counseling, Therapy and Well-being Associated services globally.</small></p>
-                                    <div>
-                                        <a href="https://www.facebook.com/HealthCityandTwinBrain"><i className="fab fa-facebook-f"></i></a>
-                                        <a><i className="fab fa-twitter"></i></a>
-                                        <a><i className="fab fa-pinterest-p"></i></a>
-
-                                    </div>
-
                                 </div>
 
                             </div>
@@ -34,13 +28,13 @@ const Footer = () => {
                                     <h5 className='my-4'>Services</h5>
 
                                     <ul className='footer-links'>
-                                        <li><Link href="/services/free-self-assessment">Free Self-Assessment</Link></li>
-                                        <li><Link href="/services/paid-assessment">Paid Assessment</Link></li>
-                                        <li><a href="https://cbt.healthbj-uk.org" target="_blank">CBT Service</a></li>
-                                        <li><a href="https://counselling.healthbj-uk.org" target="_blank">Counselling Service</a></li>
-                                        <li><a href="https://psychassessment.twinbrain.org/" target="_blank">Psychological Assessment</a></li>
-                                        <li><a href="https://eap.healthbj-uk.org/" target="_blank">Employee Assistance Programme</a></li>
-                                        <li><a href="http://search.healthbj-uk.org/" target="_blank">Search Directory</a></li>
+                                        <li><a href="/services/free-self-assessment"><CaretRightFilled style={{fontSize: 18}} />Free Self-Assessment</a></li>
+                                        <li><a href="/services/paid-assessment"><CaretRightFilled style={{fontSize: 18}} />Paid Assessment</a></li>
+                                        <li><a href="https://cbt.healthbj-uk.org" target="_blank"><CaretRightFilled style={{fontSize: 18}} />CBT Service</a></li>
+                                        <li><a href="https://counselling.healthbj-uk.org" target="_blank"><CaretRightFilled style={{fontSize: 18}} />Counselling Service</a></li>
+                                        <li><a href="https://psychassessment.twinbrain.org/" target="_blank"><CaretRightFilled style={{fontSize: 18}} />Psychological Assessment</a></li>
+                                        <li><a href="https://eap.healthbj-uk.org/" target="_blank"><CaretRightFilled style={{fontSize: 18}} />Employee Assistance Programme</a></li>
+                                        <li><a href="http://search.healthbj-uk.org/" target="_blank"><CaretRightFilled style={{fontSize: 18}} />Search Directory</a></li>
 
                                     </ul>
 
@@ -55,13 +49,13 @@ const Footer = () => {
                                 <div className="col">
                                     <h5 className='my-4'>Quick Links</h5>
 
-                                    <ul  className='footer-links'>
-                                        <li><Link href="/book-now">Book An Appointment</Link></li>
-                                        <li><Link href="/books-to-read">Books To Read</Link></li>
-                                        <li><Link href="/keeping-you-safe">Keep You Safe</Link></li>
-                                        <li><Link href="/my-account">My Account</Link></li>
-                                        <li><Link href="/disclaimer">Disclaimer</Link></li>
-                                        <li><Link href="/term-and-conditions">Terms and Conditions</Link></li>
+                                    <ul className='footer-links'>
+                                        <li><a href="/book-now"><CaretRightFilled style={{fontSize: 18}} />Book An Appointment</a></li>
+                                        <li><a href="/books-to-read"><CaretRightFilled style={{fontSize: 18}} />Books To Read</a></li>
+                                        <li><a href="/keeping-you-safe"><CaretRightFilled style={{fontSize: 18}} />Keep You Safe</a></li>
+                                        <li><a href="/my-account"><CaretRightFilled style={{fontSize: 18}} />My Account</a></li>
+                                        <li><a href="/disclaimer"><CaretRightFilled style={{fontSize: 18}} />Disclaimer</a></li>
+                                        <li><a href="/term-and-conditions"><CaretRightFilled style={{fontSize: 18}} />Terms and Conditions</a></li>
                                     </ul>
 
 
@@ -71,14 +65,18 @@ const Footer = () => {
                         </div>
                         <div className="col-md-3 col-xs-12">
                             <div className="row g-0">
-                                <div className="col">
+                                <div className="col footerContact">
 
                                     <h5 className='my-4'>Contact Us</h5>
-                                    <p>Twin Brain Davenport House</p>
-                                    <p>16 Pepper Street, Canary Wharf, London, E14 9RP, United Kingdom</p>
+                                    <p><EnvironmentFilled style={{fontSize: 22, color: '#082366'}} /> Twin Brain Davenport House <br/>
+                                        16 Pepper Street, Canary Wharf, London, E14 9RP, United Kingdom</p>
 
-                                    <a href="tel:0333 800 3006"className={`btn btn-outline-primary `}>Call Us:  0333 800 3006 </a>
+                                    <a href="tel:0333 800 3006"><PhoneFilled style={{fontSize: 22, color: '#082366'}} />  0333 800 3006 </a>
+                                    <div className='py-2'>
+                                        <a href="https://www.facebook.com/HealthCityandTwinBrain"><FacebookFilled style={{fontSize: 25, color: '#4267B2'}} /></a>
+                                        <a><TwitterOutlined style={{fontSize: 25, color: '#1DA1F2'}} /></a>
 
+                                    </div>
 
 
                                 </div>
@@ -88,7 +86,7 @@ const Footer = () => {
                     </div>
                 </div>
             </section>
-            <section className='bg-black'>
+            <section className='bg-black text-white'>
                 <div className="container p-3">
                     <div className="row">
                         <div className="col text-center">
