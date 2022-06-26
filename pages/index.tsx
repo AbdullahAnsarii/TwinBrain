@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   const router = useRouter();
   return (
     <>
-      <Carousel effect='fade' autoplay>
+      <Carousel dots={false} effect='fade' autoplay>
         <div>
           <div className={styles.contentStyle}>
             <h2 style={{ fontSize: '3vw' }}><b>Leading the way in<br />medical excellence</b></h2>
