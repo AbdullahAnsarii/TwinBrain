@@ -61,52 +61,52 @@ const Home: NextPage = () => {
 
         <Row className='my-3'>
           <Col xs={12} sm={6} md={3}>
-            <Slide triggerOnce direction='up' fraction={1}>
+            {/* <Slide triggerOnce direction='up' fraction={1}> */}
               <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
                 <CalendarTwoTone twoToneColor="#0dcaf0" style={{ fontSize: 40, color: "#0dcaf0" }} />
                 <p>Book An Appointment</p>
               </Card>
-            </Slide>
+            {/* </Slide> */}
           </Col>
           <Col xs={12} sm={6} md={3}>
-            <Slide triggerOnce direction='up' fraction={1} delay={200}>
+            {/* <Slide triggerOnce direction='up' fraction={1} delay={200}> */}
               <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
                 <SendOutlined style={{ fontSize: 40, color: "#0dcaf0" }} />
                 <p>Send A Message</p>
               </Card>
-            </Slide>
+            {/* </Slide> */}
           </Col>
           <Col xs={12} sm={6} md={3}>
-            <Slide triggerOnce direction='up' fraction={1} delay={400}>
+            {/* <Slide triggerOnce direction='up' fraction={1} delay={400}> */}
               <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
                 <PhoneTwoTone twoToneColor="#0dcaf0" style={{ fontSize: 40, color: "#0dcaf0" }} />
                 <p>Call Our Team</p>
               </Card>
-            </Slide>
+            {/* </Slide> */}
           </Col>
           <Col xs={12} sm={6} md={3}>
-            <Slide triggerOnce direction='up' fraction={1} delay={600}>
+            {/* <Slide triggerOnce direction='up' fraction={1} delay={600}> */}
               <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
                 <SearchOutlined style={{ fontSize: 40, color: "#0dcaf0" }} />
                 <p>Therapist Search</p>
               </Card>
-            </Slide>
+            {/* </Slide> */}
           </Col>
         </Row>
 
         <Row className='my-3' id={styles.row2}> 
           <Col xs={12} sm={6}>
-          <Slide triggerOnce direction='up' fraction={1}>
+          {/* <Slide triggerOnce direction='up' fraction={1}> */}
             <ReactPlayer
               url='/assets/video.mp4'
               width='100%'
               height='100%'
               controls={true}
             />
-            </Slide>
+            {/* </Slide> */}
           </Col>
           <Col xs={12} sm={6}>
-          <Slide triggerOnce direction='up' fraction={1}>
+          {/* <Slide triggerOnce direction='up' fraction={1}> */}
             <h2 className='text-center'>Book An Appointment</h2>
             <Form
               name="basic"
@@ -154,7 +154,7 @@ const Home: NextPage = () => {
                 </Button>
               </Form.Item>
             </Form>
-            </Slide>
+            {/* </Slide> */}
           </Col>
         </Row>
         {/* <AutoPlaySwipeableViews>
