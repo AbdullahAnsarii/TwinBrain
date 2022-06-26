@@ -157,7 +157,6 @@ const Home: NextPage = () => {
             </Slide>
           </Col>
         </Row>
-        <Slide triggerOnce direction='up' fraction={1} delay={200}>
         {/* <AutoPlaySwipeableViews>
             <div className={styles.questionnaire}>
               <img width='16%' height='40%' src='/aws.png' />
@@ -170,7 +169,6 @@ const Home: NextPage = () => {
               <img width='20%' height='40%' src='/vrbo.png' />
             </div>
           </AutoPlaySwipeableViews> */}
-    </Slide>
       </Container>
     </>
   )
