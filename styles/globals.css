@@ -1,6 +1,7 @@
-:root{
+:root {
   --bs-primary: #082366 !important;
 }
+
 html,
 body {
   padding: 0;
@@ -17,42 +18,56 @@ a {
 * {
   box-sizing: border-box;
 }
+
 /*Header styles */
-#header{
-  background-color: rgba(255, 255, 255, .15);  
+#header {
+  background-color: rgba(255, 255, 255, .15);
   backdrop-filter: blur(5px);
 }
-#header a{
+
+#header a {
   color: var(--bs-primary) !important;
 }
-#header span a{
+
+#header span {
   color: var(--bs-primary) !important;
 }
-#header span:hover{
+
+#header span:hover {
   color: var(--bs-info) !important;
 }
 
-#header a:hover{
+#header a:hover {
   color: var(--bs-info) !important;
 }
-.navbar-nav{
+
+.navbar-nav {
   align-items: center;
 }
+
 #header-dropdown-items {
   color: var(--bs-primary) !important;
 }
+
 #header-dropdown-items:hover {
   background: var(--bs-primary) !important;
   color: white !important;
 }
-.ant-menu-item-selected::after{
+
+.ant-menu-item-selected::after {
   border-bottom: none !important;
 }
-.ant-menu-horizontal > .ant-menu-item::after,
-.ant-menu-horizontal > .ant-menu-submenu::after {
+
+.ant-menu-horizontal>.ant-menu-item::after,
+.ant-menu-horizontal>.ant-menu-submenu::after {
   border-bottom: none !important;
   transition: none !important;
 }
+
+.ant-menu-horizontal {
+  /* border-bottom: none !important; */
+}
+
 /* Footer styles */
 
 .footer-links {
@@ -61,17 +76,21 @@ a {
   padding: 0;
 
 }
+
 .footer-links a {
   text-decoration: none;
   color: var(--bs-primary) !important;
 }
+
 .footer-links a:hover {
   /* text-decoration: none; */
   color: var(--bs-info) !important;
 }
-.footerContact a{
+
+.footerContact a {
   color: #082366 !important;
 }
+
 .footerContact a:hover {
   /* text-decoration: none; */
   color: var(--bs-info) !important;
