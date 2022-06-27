@@ -10,7 +10,7 @@
 .card {
   margin: 1rem;
   /* padding: 1.5rem; */
-  background-color: #e6e6e6;
+  background-color: #f2f8f9;
   text-align: center !important;
   color: inherit;
   text-decoration: none;
@@ -40,6 +40,33 @@
   flex-basis: 25%;
 }
 
+.assessors{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#assessment {
+  background-image: url('/assets/images/assessment-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  justify-content: center;
+}
+.assessmentCard {
+  margin: 1rem;
+  padding: 2.5rem;
+  background-color: #f2f8f9;
+  text-align: center !important;
+  color: inherit;
+  text-decoration: none;
+  max-width: 300px;
+}
+.assessmentCard:hover {
+  color: #082366;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -47,6 +74,11 @@
   }
   .questionnaire{
     display: flex;
+    flex-direction: column;
+  }
+  .assessors{
+    display: flex;
+    justify-content: center;
     flex-direction: column;
   }
 }

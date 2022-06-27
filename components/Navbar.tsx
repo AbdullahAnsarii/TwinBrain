@@ -2,12 +2,14 @@ import { CaretDownFilled } from '@ant-design/icons';
 import { Menu } from 'antd';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { Navbar } from 'react-bootstrap';
 import { navbarItems } from '../data/navbar';
 
 const Header = () => {
     const router = useRouter();
     return (
-            <Menu id="header" mode="horizontal" className='d-flex justify-content-center px-5 fixed-top'>
+        <>
+            <Menu id="header" mode="horizontal" className='justify-content-center px-5 fixed-top d-none d-sm-flex'>
             <div className='my-2'>
                 <Link href="/"><img width="40%" src="/assets/images/logo.png"></img></Link>
             </div>
@@ -30,6 +32,10 @@ const Header = () => {
                     )
                 })}
             </Menu>
+            <Navbar>
+                
+            </Navbar>
+            </>
     );
 
 }
