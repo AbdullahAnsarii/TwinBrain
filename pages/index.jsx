@@ -1,11 +1,11 @@
 import { Card, Carousel, Divider } from 'antd'
-import type { NextPage } from 'next'
+// import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Col, Container, Row } from 'react-bootstrap'
 import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router'
-import { CalendarTwoTone, PhoneTwoTone, SearchOutlined, SendOutlined } from '@ant-design/icons';
+import { CalendarTwoTone, EditFilled, PhoneTwoTone, SearchOutlined, SendOutlined } from '@ant-design/icons';
 import { Slide } from "react-awesome-reveal";
 import { Button, Checkbox, Form, Input } from 'antd';
 import ReactPlayer from 'react-player';
@@ -14,14 +14,14 @@ import { autoPlay } from 'react-swipeable-views-utils';
 
 
 
-const Home: NextPage = () => {
+const Home = () => {
   const router = useRouter();
   const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-  const onFinish = (values: any) => {
+  const onFinish = (values) => {
     console.log('Success:', values);
   };
 
-  const onFinishFailed = (errorInfo: any) => {
+  const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
   return (
@@ -62,41 +62,41 @@ const Home: NextPage = () => {
         <Row className='my-3'>
           <Col xs={12} sm={6} md={3}>
             {/* <Slide triggerOnce direction='up' fraction={1}> */}
-              <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
-                <CalendarTwoTone twoToneColor="#0dcaf0" style={{ fontSize: 40, color: "#0dcaf0" }} />
-                <p>Book An Appointment</p>
-              </Card>
+            <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
+              <CalendarTwoTone twoToneColor="#0dcaf0" style={{ fontSize: 40, color: "#0dcaf0" }} />
+              <p>Book An Appointment</p>
+            </Card>
             {/* </Slide> */}
           </Col>
           <Col xs={12} sm={6} md={3}>
             {/* <Slide triggerOnce direction='up' fraction={1} delay={200}> */}
-              <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
-                <SendOutlined style={{ fontSize: 40, color: "#0dcaf0" }} />
-                <p>Send A Message</p>
-              </Card>
+            <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
+              <SendOutlined style={{ fontSize: 40, color: "#0dcaf0" }} />
+              <p>Send A Message</p>
+            </Card>
             {/* </Slide> */}
           </Col>
           <Col xs={12} sm={6} md={3}>
             {/* <Slide triggerOnce direction='up' fraction={1} delay={400}> */}
-              <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
-                <PhoneTwoTone twoToneColor="#0dcaf0" style={{ fontSize: 40, color: "#0dcaf0" }} />
-                <p>Call Our Team</p>
-              </Card>
+            <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
+              <PhoneTwoTone twoToneColor="#0dcaf0" style={{ fontSize: 40, color: "#0dcaf0" }} />
+              <p>Call Our Team</p>
+            </Card>
             {/* </Slide> */}
           </Col>
           <Col xs={12} sm={6} md={3}>
             {/* <Slide triggerOnce direction='up' fraction={1} delay={600}> */}
-              <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
-                <SearchOutlined style={{ fontSize: 40, color: "#0dcaf0" }} />
-                <p>Therapist Search</p>
-              </Card>
+            <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
+              <SearchOutlined style={{ fontSize: 40, color: "#0dcaf0" }} />
+              <p>Therapist Search</p>
+            </Card>
             {/* </Slide> */}
           </Col>
         </Row>
 
-        <Row className='my-3' id={styles.row2}> 
+        <Row className='my-3' id={styles.row2}>
           <Col xs={12} sm={6}>
-          {/* <Slide triggerOnce direction='up' fraction={1}> */}
+            {/* <Slide triggerOnce direction='up' fraction={1}> */}
             <ReactPlayer
               url='/assets/video.mp4'
               width='100%'
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
             {/* </Slide> */}
           </Col>
           <Col xs={12} sm={6}>
-          {/* <Slide triggerOnce direction='up' fraction={1}> */}
+            {/* <Slide triggerOnce direction='up' fraction={1}> */}
             <h2 className='text-center'>Book An Appointment</h2>
             <Form
               name="basic"
@@ -157,18 +157,103 @@ const Home: NextPage = () => {
             {/* </Slide> */}
           </Col>
         </Row>
-        {/* <AutoPlaySwipeableViews>
+        <Row>
+          <h2 className='text-center'>Questionnaires</h2>
+          <AutoPlaySwipeableViews>
             <div className={styles.questionnaire}>
-              <img width='16%' height='40%' src='/aws.png' />
-              <img width='20%' height='40%' src='/microsoft.png' />
-              <img width='20%' height='40%' src='/vortex.png' />
+              <Card>
+                <div>
+                  <EditFilled style={{ fontSize: 40 }} />
+                </div>
+                <div>
+                  <h5>PHQ9 (Depression)</h5>
+                  <Button type="primary" ghost={true}>
+                    Click Here
+                  </Button>
+                </div>
+              </Card>
+              <Card>
+                <div>
+                  <EditFilled style={{ fontSize: 40 }} />
+                </div>
+                <div>
+                  <h5>GAD7 (Anxiety)</h5>
+                  <Button type="primary" ghost={true}>
+                    Click Here
+                  </Button>
+                </div>
+              </Card>
+              <Card>
+                <div>
+                  <EditFilled style={{ fontSize: 40 }} />
+                </div>
+                <div>
+                  <h5>IAPT Phobia Scale</h5>
+                  <Button type="primary" ghost={true}>
+                    Click Here
+                  </Button>
+                </div>
+              </Card>
+              <Card>
+                <div>
+                  <EditFilled style={{ fontSize: 40 }} />
+                </div>
+                <div>
+                  <h5>Work and Social Adjustment Scale</h5>
+                  <Button type="primary" ghost={true}>
+                    Click Here
+                  </Button>
+                </div>
+              </Card>
             </div>
             <div className={styles.questionnaire}>
-              <img width='16%' height='40%' src='/airbnb.png' />
-              <img width='20%' height='40%' src='/upwork.png' />
-              <img width='20%' height='40%' src='/vrbo.png' />
+              <Card>
+                <div>
+                  <EditFilled style={{ fontSize: 40 }} />
+                </div>
+                <div>
+                  <h5>Empathy Quotient (EQ)</h5>
+                  <Button type="primary" ghost={true}>
+                    Click Here
+                  </Button>
+                </div>
+              </Card>
+              <Card>
+                <div>
+                  <EditFilled style={{ fontSize: 40 }} />
+                </div>
+                <div>
+                  <h5>Autism Spectrum Quotient (AQ)</h5>
+                  <Button type="primary" ghost={true}>
+                    Click Here
+                  </Button>
+                </div>
+              </Card>
+              <Card>
+                <div>
+                  <EditFilled style={{ fontSize: 40 }} />
+                </div>
+                <div>
+                  <h5>Complicated Grief Inventory</h5>
+                  <Button type="primary" ghost={true}>
+                    Click Here
+                  </Button>
+                </div>
+              </Card>
+              <Card>
+                <div>
+                  <EditFilled style={{ fontSize: 40 }} />
+                </div>
+                <div>
+                  <h5>Child and Adolescent Disruptive Behaviour Inventory - Parent Survey (CADBI)</h5>
+                  <Button type="primary" ghost={true}>
+                    Click Here
+                  </Button>
+                </div>
+              </Card>
             </div>
-          </AutoPlaySwipeableViews> */}
+          </AutoPlaySwipeableViews>
+        </Row>
       </Container>
     </>
   )
