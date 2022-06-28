@@ -6,16 +6,16 @@ import { CaretRightFilled, EnvironmentFilled, FacebookFilled, LinkedinFilled, Ph
 const Footer = () => {
     const router = useRouter()
     return(
-        <footer style={{background: "#e6e6e6", bottom: 0}}>
+        <footer className='pt-5' style={{background: "#e6e6e6", bottom: 0 }}>
             <section>
-                <div className="container text-dark">
+                <div className="container ">
 
                     <div className="row g-md-5">
                         <div className="col-md-3 col-xs-12">
-                            <div className="row">
+                            <div className="row ">
 
-                                <div className="col" >
-                                <img width="60%" src="/assets/images/logo.png" />
+                                <div className="col d-flex flex-column align-items-center" >
+                                <img width="45%" src="/assets/images/logo.png" />
 
                                     <p><small>We are a UK based healthcare social enterprise in London supporting family’s psychological, physical, financial, legal, and housing well-being. It was founded in 2007. We offer Counseling, Therapy and Well-being Associated services globally.</small></p>
                                 </div>
@@ -25,7 +25,7 @@ const Footer = () => {
                         <div className="col-md-3 col-xs-12">
                             <div className="row">
                                 <div className="col">
-                                    <h5 className='my-4'>Services</h5>
+                                    <h5 className='my-4 text-center'>Services</h5>
 
                                     <ul className='footer-links'>
                                         <li><a href="/services/free-self-assessment"><CaretRightFilled style={{fontSize: 18}} />Free Self-Assessment</a></li>
@@ -47,7 +47,7 @@ const Footer = () => {
                         <div className="col-md-3 col-xs-12">
                             <div className="row g-0">
                                 <div className="col">
-                                    <h5 className='my-4'>Quick Links</h5>
+                                    <h5 className='my-4 text-center'>Quick Links</h5>
 
                                     <ul className='footer-links'>
                                         <li><a href="/book-now"><CaretRightFilled style={{fontSize: 18}} />Book An Appointment</a></li>
@@ -67,7 +67,7 @@ const Footer = () => {
                             <div className="row g-0">
                                 <div className="col footerContact">
 
-                                    <h5 className='my-4'>Contact Us</h5>
+                                    <h5 className='my-4 text-center'>Contact Us</h5>
                                     <p><EnvironmentFilled style={{fontSize: 22, color: '#082366'}} /> Twin Brain Davenport House <br/>
                                         16 Pepper Street, Canary Wharf, London, E14 9RP, United Kingdom</p>
 

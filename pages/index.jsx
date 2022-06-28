@@ -29,27 +29,30 @@ const Home = () => {
       <Carousel dots={false} effect='fade' autoplay>
         <div>
           <div className={styles.contentStyle}>
-            <h2 style={{ fontSize: '3vw' }}><b>Leading the way in<br />medical excellence</b></h2>
-            <p style={{ fontSize: '1vw' }}><b>Earth greater grass for good. Place for divide evening yielding<br />them that. Creeping beginning over gathered brought.</b></p>
+            <h2 style={{ fontSize: '35px' }} clas><b>Leading the way in<br />medical excellence</b></h2>
+            <p style={{ fontSize: '12px' }}><b>Earth greater grass for good. Place for divide evening yielding<br />them that. Creeping beginning over gathered brought.</b></p>
             <Button type="primary" onClick={() => router.push("/services")}>Browse Services</Button>
           </div>
-          <img width="100%" src="/assets/images/home-1.jpg"></img>
+          <img width="100%" src="/assets/images/home-1.jpg" className='d-none d-md-flex'></img>
+          <img width="100%" src="/assets/images/home1-mob.png" className='d-md-none d-xs-flex' ></img>
         </div>
         <div>
           <div className={styles.contentStyle}>
-            <h2 style={{ fontSize: '3vw' }}><b>What are you<br />looking for?</b></h2>
-            <p style={{ fontSize: '1vw' }}><b>I Like to Complete a Free Anxiety and Depression/Low Mood<br />Questionnaire to See How I am Feeling.</b></p>
+            <h2 style={{ fontSize: '35px' }}><b>What are you<br />looking for?</b></h2>
+            <p style={{ fontSize: '12px' }}><b>I Like to Complete a Free Anxiety and Depression/Low Mood<br />Questionnaire to See How I am Feeling.</b></p>
             <Button type="primary" onClick={() => router.push("/services/free-self-assessment")}>Take Questionnaire</Button>
           </div>
-          <img width="100%" src="/assets/images/home-2.png"></img>
+          <img width="100%" src="/assets/images/home-2.png" className='d-none d-md-flex'></img>
+          <img width="100%" src="/assets/images/home2-mob.png" className='d-md-none d-xs-flex' ></img>
         </div>
         <div>
           <div className={styles.contentStyle}>
-            <h2 style={{ fontSize: '3vw' }}><b>About Us</b></h2>
-            <p style={{ fontSize: '1vw' }}><b><strong>TwinBrain Ltd</strong>, owner of TwinBrain App, is a&nbsp;UK&nbsp;based healthcare in London<br />that operates on social enterprise principles. It was registered 30 April 2020<br />with Companies House  number 12580210.</b></p>
+            <h2 style={{ fontSize: '35px' }}><b>About Us</b></h2>
+            <p style={{ fontSize: '12px' }}><b><strong>TwinBrain Ltd</strong>, owner of TwinBrain App, is a&nbsp;UK&nbsp;based healthcare in London<br />that operates on social enterprise principles. It was registered 30 April 2020<br />with Companies House  number 12580210.</b></p>
             <Button type="primary" onClick={() => router.push("/about-us")}>Find Out More</Button>
           </div>
-          <img width="100%" src="/assets/images/home-3.png"></img>
+          <img width="100%" src="/assets/images/home-3.png" className='d-none d-md-flex'></img>
+          <img width="100%" src="/assets/images/home3-mob.png" className='d-md-none d-xs-flex' ></img>
         </div>
       </Carousel>
       <Container>
@@ -61,7 +64,7 @@ const Home = () => {
         </Head>
 
         <Row className='my-3'>
-          <Col xs={12} sm={6} md={3}>
+          <Col xs={12} sm={6} md={3} className="d-flex justify-content-center">
             <Slide triggerOnce direction='up' fraction={1}>
               <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
                 <CalendarTwoTone twoToneColor="#0dcaf0" style={{ fontSize: 40, color: "#0dcaf0" }} />
@@ -69,7 +72,7 @@ const Home = () => {
               </Card>
             </Slide>
           </Col>
-          <Col xs={12} sm={6} md={3}>
+          <Col xs={12} sm={6} md={3} className="d-flex justify-content-center">
             <Slide triggerOnce direction='up' fraction={1} delay={200}>
               <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
                 <SendOutlined style={{ fontSize: 40, color: "#0dcaf0" }} />
@@ -77,7 +80,7 @@ const Home = () => {
               </Card>
             </Slide>
           </Col>
-          <Col xs={12} sm={6} md={3}>
+          <Col xs={12} sm={6} md={3} className="d-flex justify-content-center">
             <Slide triggerOnce direction='up' fraction={1} delay={400}>
               <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
                 <PhoneTwoTone twoToneColor="#0dcaf0" style={{ fontSize: 40, color: "#0dcaf0" }} />
@@ -85,7 +88,7 @@ const Home = () => {
               </Card>
             </Slide>
           </Col>
-          <Col xs={12} sm={6} md={3}>
+          <Col xs={12} sm={6} md={3} className="d-flex justify-content-center">
             <Slide triggerOnce direction='up' fraction={1} delay={600}>
               <Card onClick={() => router.push("/")} className={styles.card} bordered={false} hoverable={true}>
                 <SearchOutlined style={{ fontSize: 40, color: "#0dcaf0" }} />
