@@ -11,7 +11,7 @@ const Header = () => {
         <>
             <Menu id="header" mode="horizontal" className='justify-content-center px-5 fixed-top d-none d-md-flex'>
                 <div className='my-2'>
-                    <Link href="/"><img width="100%" src="/assets/images/logo.png"></img></Link>
+                    <Link href="/"><img width="70%" src="/assets/images/logo.png"></img></Link>
                 </div>
                 {navbarItems.map((navbarItem, index) => {
                     if (navbarItem.subItems.length == 0) return (
