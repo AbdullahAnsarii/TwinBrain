@@ -3,7 +3,7 @@ import { Card, Carousel, Divider } from 'antd'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Col, Container, Row } from 'react-bootstrap'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import { useRouter } from 'next/router'
 import { CalendarTwoTone, DollarCircleTwoTone, EditFilled, FacebookFilled, LinkedinFilled, MedicineBoxTwoTone, PhoneTwoTone, RightCircleOutlined, RightCircleTwoTone, SearchOutlined, SendOutlined, TwitterOutlined } from '@ant-design/icons';
 import { Slide } from "react-awesome-reveal";
@@ -29,7 +29,7 @@ const Home = () => {
       <Carousel dots={false} effect='fade' autoplay>
         <div>
           <div className={styles.contentStyle}>
-            <h2 style={{ fontSize: '35px' }} clas><b>Leading the way in<br />medical excellence</b></h2>
+            <h2 style={{ fontSize: '5vw' }} clas><b>Leading the way in<br />medical excellence</b></h2>
             <p style={{ fontSize: '12px' }}><b>Earth greater grass for good. Place for divide evening yielding<br />them that. Creeping beginning over gathered brought.</b></p>
             <Button type="primary" onClick={() => router.push("/services")}>Browse Services</Button>
           </div>
@@ -38,7 +38,7 @@ const Home = () => {
         </div>
         <div>
           <div className={styles.contentStyle}>
-            <h2 style={{ fontSize: '35px' }}><b>What are you<br />looking for?</b></h2>
+            <h2 style={{ fontSize: '5vw' }}><b>What are you<br />looking for?</b></h2>
             <p style={{ fontSize: '12px' }}><b>I Like to Complete a Free Anxiety and Depression/Low Mood<br />Questionnaire to See How I am Feeling.</b></p>
             <Button type="primary" onClick={() => router.push("/services/free-self-assessment")}>Take Questionnaire</Button>
           </div>
@@ -47,7 +47,7 @@ const Home = () => {
         </div>
         <div>
           <div className={styles.contentStyle}>
-            <h2 style={{ fontSize: '35px' }}><b>About Us</b></h2>
+            <h2 style={{ fontSize: '5vw' }}><b>About Us</b></h2>
             <p style={{ fontSize: '12px' }}><b><strong>TwinBrain Ltd</strong>, owner of TwinBrain App, is a&nbsp;UK&nbsp;based healthcare in London<br />that operates on social enterprise principles. It was registered 30 April 2020<br />with Companies House  number 12580210.</b></p>
             <Button type="primary" onClick={() => router.push("/about-us")}>Find Out More</Button>
           </div>
