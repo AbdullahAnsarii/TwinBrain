@@ -1,5 +1,5 @@
 import { CaretDownFilled } from '@ant-design/icons';
-import { Menu } from 'antd';
+import { Button, Menu } from 'antd';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
@@ -14,6 +14,11 @@ const Header = () => {
                     <Link href="/"><img width="70%" src="/assets/images/logo.png"></img></Link>
                 </div>
                 {navbarItems.map((navbarItem, index) => {
+                    if (navbarItem.text == "Book Now") return (
+                        <Menu.Item className='align-self-center' key={navbarItem.url} >
+                        <Button id='navbarButton' type="primary">{navbarItem.text}</Button>
+                        </Menu.Item>
+                    )
                     if (navbarItem.subItems.length == 0) return (
                         <Menu.Item className='align-self-center' key={navbarItem.url} >
                             <Link href={navbarItem.url}>{navbarItem.text}</Link>

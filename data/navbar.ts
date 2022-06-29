@@ -2,7 +2,6 @@ export const navbarItems: { text: string, url: string, subItems: { text: string,
     // { text: "Home", url: "/", subItems: [] },
     { text: "About Us", url: "/about-us", subItems: [] },
     { text: "Contact", url: "/contact-us", subItems: [] },
-    { text: "Book Now", url: "/services/paid-assessment", subItems: [] },
     {
         text: "Services", url: "", subItems: [
             { text: "All Services", url: "/services" },
@@ -21,5 +20,6 @@ export const navbarItems: { text: string, url: string, subItems: { text: string,
             { text: "Gift Vouchers", url: "/gift-vouchers" },
             { text: "How To Pay", url: "how-to-pay" }
         ]
-    }
+    },
+    { text: "Book Now", url: "/services/paid-assessment", subItems: [] },
 ]
