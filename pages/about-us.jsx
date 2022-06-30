@@ -22,8 +22,8 @@ const AboutUs = () => {
                     <Breadcrumb.Item onClick={() => router.push("/about-us")}>About Us</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
-            <Container>
-                <Row>
+            <Container className="my-5">
+                <Row className="my-5">
                     <h1 className="text-center">Assessment Service</h1>
                     <Col xs={12} md={6}>
                         <Slide triggerOnce fraction={1} direction="up">
@@ -39,7 +39,7 @@ const AboutUs = () => {
                         </Slide>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="my-5">
                     <h1 className="text-center">TwinBrain Ltd.</h1>
 
                     <Col xs={12} md={6}>
@@ -55,7 +55,7 @@ const AboutUs = () => {
                         </Slide>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="my-5">
                     <h1 className="text-center">TwinBrain Vision</h1>
                     <Col xs={12} md={6}>
                         <Slide triggerOnce fraction={1} direction="up">
@@ -72,7 +72,7 @@ const AboutUs = () => {
                        </Slide>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="my-5">
                 <Slide triggerOnce direction='up' fraction={1} delay={200}>
                     <h1 className="text-center">Privacy - How do we use your information?</h1>
                     <p>Your privacy is important and we take it seriously. Your personal information will only be used to administer your subscription (if any) and your website account (if any) and to offer the services and products you asked from us, example in relationship to your  request for treatments, self-help resources, training etc.</p>
