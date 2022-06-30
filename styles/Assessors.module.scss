@@ -1,0 +1,80 @@
+$primary: #000;
+$secondary: rgb(8, 35, 102);
+
+
+.title,
+.description {
+    text-align: center;
+}
+
+.description {
+    // margin: 4rem 0;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.parallax h1 {
+    position: absolute;
+    padding-top: 15vw;
+    padding-left: 16vw;
+    padding-bottom: 15vw;
+    color: #fff;
+    font-size: 5vw
+}
+
+.parallax {
+    box-shadow: inset 0 0 0 1000px rgba(24, 144, 255, 0.4);
+    background-image: url("/assets/images/assessors.png");
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.breadcrumb {
+    color: #fff;
+    font-size: larger;
+    padding-top: 22vw;
+    padding-left: 16vw;
+    padding-bottom: 15vw;
+}
+.image{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+@media (max-width: 600px) {
+    .grid {
+        width: 100%;
+        flex-direction: column;
+    }
+    .parallax {
+        box-shadow: inset 0 0 0 1000px rgba(24, 144, 255, 0.4);
+        background-image: url("/assets/images/assessors-mobile.png");
+        /* Full height */
+        height: 100%;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .parallax h1 {
+        color: #fff;
+        padding-top: 30vw;
+        font-size: 8vw;
+    }
+
+    .breadcrumb {
+        font-size: larger;
+        padding-top: 40vw;
+        padding-left: 16vw;
+        padding-bottom: 15vw;
+    }
+
+}
