@@ -90,9 +90,9 @@ const ContactUs = () => {
                                     <TextArea rows={4} />
                                 </Form.Item>
 
-                                <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+                                <Form.Item wrapperCol={{ offset: 4, span: 30 }}>
                                     <Button type="primary" htmlType="submit">
-                                        Book Now
+                                       Submit
                                     </Button>
                                 </Form.Item>
                             </Form>
