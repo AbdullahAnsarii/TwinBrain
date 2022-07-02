@@ -9,13 +9,13 @@ import { Slide } from "react-awesome-reveal";
 const { TextArea } = Input;
 const ContactUs = () => {
     const onFinish = (values) => {
-       
+
         console.log('Success:', values);
-      };
-    
-      const onFinishFailed = (errorInfo) => {
+    };
+
+    const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
-      };
+    };
     return (
         <>
             <Head>
@@ -35,7 +35,7 @@ const ContactUs = () => {
                 <Row className="my-5">
                     <Col xs={12} md={6}>
                         <Slide triggerOnce fraction={1} direction="up">
-                        <h2 className='text-center'>How To Find Us</h2>
+                            <h2 className='text-center'>How To Find Us</h2>
                             <Descriptions size="small" bordered column={1}>
                                 <Descriptions.Item label={<ShopFilled style={{ fontSize: 25, color: '#082366' }} />}>Davenport House</Descriptions.Item>
                                 <Descriptions.Item label={<EnvironmentFilled style={{ fontSize: 25, color: '#082366' }} />}>16 Pepper Street, Canary Wharf, London,E14 9RP, United Kingdom</Descriptions.Item>
@@ -46,8 +46,8 @@ const ContactUs = () => {
                             </Descriptions>
                         </Slide>
                     </Col>
-                    
-                    <Col  xs={12} md={6}>
+
+                    <Col xs={12} md={6}>
                         <Slide className="float-left" triggerOnce direction='up' fraction={1}>
                             <h2 className='text-center'>Get In Touch</h2>
                             <Form
@@ -92,7 +92,7 @@ const ContactUs = () => {
 
                                 <Form.Item wrapperCol={{ offset: 4, span: 30 }}>
                                     <Button type="primary" htmlType="submit">
-                                       Submit
+                                        Submit
                                     </Button>
                                 </Form.Item>
                             </Form>
