@@ -10,7 +10,6 @@ import { assessors } from "../data/assessors";
 import { useState } from "react";
 
 const Assessors = () => {
-    const [loading, setLoading] = useState(false);
     const [visible, setVisible] = useState(false);
     const [selectedAssessor, setSelectedAssessor] = useState(null);
     const handleDetails = (event) => {
@@ -22,7 +21,7 @@ const Assessors = () => {
         <>
             <Head>
                 <title>Assessors</title>
-                <meta name="description" content="Twin Brain" />
+                <meta name="description" content="Assessors | Twin Brain" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
