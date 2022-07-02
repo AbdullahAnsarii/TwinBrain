@@ -66,7 +66,7 @@ const Assessors = () => {
                     ]}
                 >
                     <div className="d-flex justify-content-center mb-2">
-                        <Image preview={false} width='25%' src={selectedAssessor.image} />
+                        <Image preview={false} width='25%' src={selectedAssessor?.image} />
                     </div>
                     <div dangerouslySetInnerHTML={{ __html: selectedAssessor?.profile }} />
                 </Modal>
