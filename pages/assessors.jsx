@@ -1,12 +1,23 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Head from "next/head";
 import styles from '../styles/Assessors.module.scss';
-import { Breadcrumb, Image, Spin } from "antd";
+import { Breadcrumb, Button, Spin, Modal, Image } from "antd";
 import Link from "next/link";
 import router from "next/router";
-import { ArrowRightOutlined, CheckOutlined, CalendarTwoTone, DollarCircleTwoTone, EditFilled, FacebookFilled, LinkedinFilled, MedicineBoxTwoTone, PhoneTwoTone, RightCircleOutlined, RightCircleTwoTone, SearchOutlined, SendOutlined, TwitterOutlined } from "@ant-design/icons";
+import { FacebookFilled, LinkedinFilled, TwitterOutlined } from "@ant-design/icons";
 import { Slide } from "react-awesome-reveal";
+import { assessors } from "../data/assessors";
+import { useState } from "react";
+
 const Assessors = () => {
+    const [loading, setLoading] = useState(false);
+    const [visible, setVisible] = useState(false);
+    const [selectedAssessor, setSelectedAssessor] = useState(null);
+    const handleDetails = (event) => {
+        setSelectedAssessor(assessors.find(assessor => assessor.id == event.currentTarget.id));
+        setVisible(true);
+        console.log(selectedAssessor)
+    }
     return (
         <>
             <Head>
@@ -24,173 +35,42 @@ const Assessors = () => {
             </div>
             <Container className="my-5">
                 <Row>
-                    <Col xs={12} sm={6} md={4}>
-                        <div className="our-team">
-                            <div className="picture">
-                                <img className="img-fluid" src="/assets/images/dr-francis-selemo.png" />
+                    {assessors.map(assessor => (
+                        <Col id={assessor.id} xs={12} sm={6} md={4}>
+                            <div className="our-team">
+                                <div className="picture">
+                                    <img className="img-fluid" src={assessor.image} />
+                                </div>
+                                <div className="team-content">
+                                    <h3 className="name">{assessor.name}</h3>
+                                    <h4 className="title">{assessor.title}</h4>
+                                </div>
+                                <ul className="social">
+                                    <li><a href="/"><FacebookFilled /></a></li>
+                                    <li><a href="/"><TwitterOutlined /></a></li>
+                                    <li><a href="/"><LinkedinFilled /></a></li>
+                                </ul>
+                                <Button id={assessor.id} className="mb-3" type='primary' onClick={handleDetails}>View Details</Button>
                             </div>
-                            <div className="team-content">
-                                <h3 className="name">Dr. Francis Selemo</h3>
-                                <h4 className="title">CPsychol, AFBPsS, MBABCP, MCMI</h4>
-                            </div>
-                            <ul className="social">
-                                <li><a href="/"><FacebookFilled /></a></li>
-                                <li><a href="/"><TwitterOutlined /></a></li>
-                                <li><a href="/"><LinkedinFilled /></a></li>
-                            </ul>
-                        </div>
-                    </Col>
-                    <Col xs={12} sm={6} md={4}>
-                        <div className="our-team">
-                            <div className="picture">
-                                <img className="img-fluid" src="/assets/images/lucy-arnold.png" />
-                            </div>
-                            <div className="team-content">
-                                <h3 className="name">Lucy Arnold</h3>
-                                <h4 className="title">Clinical Specialist</h4>
-                            </div>
-                            <ul className="social">
-                                <li><a href="/"><FacebookFilled /></a></li>
-                                <li><a href="/"><TwitterOutlined /></a></li>
-                                <li><a href="/"><LinkedinFilled /></a></li>
-                            </ul>
-                        </div>
-                    </Col>
-                    <Col xs={12} sm={6} md={4}>
-                        <div className="our-team">
-                            <div className="picture">
-                                <img className="img-fluid" src="/assets/images/lindita-nerguti.jpg" />
-                            </div>
-                            <div className="team-content">
-                                <h3 className="name">Linditi Nerguti</h3>
-                                <h4 className="title">Psychotheraphy Practitioner</h4>
-                            </div>
-                            <ul className="social">
-                                <li><a href="/"><FacebookFilled /></a></li>
-                                <li><a href="/"><TwitterOutlined /></a></li>
-                                <li><a href="/"><LinkedinFilled /></a></li>
-                            </ul>
-                        </div>
-                    </Col>
+                        </Col>
+                    ))}
                 </Row>
-                <Row>
-                    <Col xs={12} sm={6} md={4}>
-                        <div className="our-team">
-                            <div className="picture">
-                                <img className="img-fluid" src="/assets/images/farida.jpg" />
-                            </div>
-                            <div className="team-content">
-                                <h3 className="name">Farida</h3>
-                                <h4 className="title">Integrative Counsellor</h4>
-                            </div>
-                            <ul className="social">
-                                <li><a href="/"><FacebookFilled /></a></li>
-                                <li><a href="/"><TwitterOutlined /></a></li>
-                                <li><a href="/"><LinkedinFilled /></a></li>
-                            </ul>
-                        </div>
-                    </Col>
-                    <Col xs={12} sm={6} md={4}>
-                        <div className="our-team">
-                            <div className="picture">
-                                <img className="img-fluid" src="/assets/images/daniel.jpg" />
-                            </div>
-                            <div className="team-content">
-                                <h3 className="name">Daniel Mirea</h3>
-                                <h4 className="title">Consultant Cognitive Behavioural</h4>
-                            </div>
-                            <ul className="social">
-                                <li><a href="/"><FacebookFilled /></a></li>
-                                <li><a href="/"><TwitterOutlined /></a></li>
-                                <li><a href="/"><LinkedinFilled /></a></li>
-                            </ul>
-                        </div>
-                    </Col>
-                    <Col xs={12} sm={6} md={4}>
-                        <div className="our-team">
-                            <div className="picture">
-                                <img className="img-fluid" src="/assets/images/raymond-vandy.jpg" />
-                            </div>
-                            <div className="team-content">
-                                <h3 className="name">Raymond Vandy</h3>
-                                <h4 className="title">Psychodynamic Counsellor</h4>
-                            </div>
-                            <ul className="social">
-                                <li><a href="/"><FacebookFilled /></a></li>
-                                <li><a href="/"><TwitterOutlined /></a></li>
-                                <li><a href="/"><LinkedinFilled /></a></li>
-                            </ul>
-                        </div>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col xs={12} sm={6} md={4}>
-                        <div className="our-team">
-                            <div className="picture">
-                                <img className="img-fluid" src="/assets/images/ms-emma-tierney.jpg" />
-                            </div>
-                            <div className="team-content">
-                                <h3 className="name">Ms. Emma Tierney</h3>
-                                <h4 className="title">Integrative Counsellor</h4>
-                            </div>
-                            <ul className="social">
-                                <li><a href="/"><FacebookFilled /></a></li>
-                                <li><a href="/"><TwitterOutlined /></a></li>
-                                <li><a href="/"><LinkedinFilled /></a></li>
-                            </ul>
-                        </div>
-                    </Col>
-                    <Col xs={12} sm={6} md={4}>
-                        <div className="our-team">
-                            <div className="picture">
-                                <img className="img-fluid" src="/assets/images/danelle-devi-hollenbeck.jpg" />
-                            </div>
-                            <div className="team-content">
-                                <h3 className="name">Danelle Devi</h3>
-                                <h4 className="title">Consultant Cognitive Behavioural</h4>
-                            </div>
-                            <ul className="social">
-                                <li><a href="/"><FacebookFilled /></a></li>
-                                <li><a href="/"><TwitterOutlined /></a></li>
-                                <li><a href="/"><LinkedinFilled /></a></li>
-                            </ul>
-                        </div>
-                    </Col>
-                    <Col xs={12} sm={6} md={4}>
-                        <div className="our-team">
-                            <div className="picture">
-                                <img className="img-fluid" src="/assets/images/edward-bbira.png" />
-                            </div>
-                            <div className="team-content">
-                                <h3 className="name">Edward Bbira</h3>
-                                <h4 className="title">Psychodynamic Counsellor</h4>
-                            </div>
-                            <ul className="social">
-                                <li><a href="/"><FacebookFilled /></a></li>
-                                <li><a href="/"><TwitterOutlined /></a></li>
-                                <li><a href="/"><LinkedinFilled /></a></li>
-                            </ul>
-                        </div>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col xs={12} sm={6} md={4}>
-                        <div className="our-team">
-                            <div className="picture">
-                                <img className="img-fluid" src="/assets/images/caroline-howard.jpg" />
-                            </div>
-                            <div className="team-content">
-                                <h3 className="name">Caroline Howard</h3>
-                                <h4 className="title">Integrative Counsellor</h4>
-                            </div>
-                            <ul className="social">
-                                <li><a href="/"><FacebookFilled /></a></li>
-                                <li><a href="/"><TwitterOutlined /></a></li>
-                                <li><a href="/"><LinkedinFilled /></a></li>
-                            </ul>
-                        </div>
-                    </Col>
-                </Row>
+                <Modal
+                    width="900px"
+                    onCancel={() => setVisible(false)}
+                    visible={visible}
+                    title={selectedAssessor?.name}
+                    footer={[
+                        <Button key="submit" type="primary" onClick={() => setVisible(false)}>
+                            Close
+                        </Button>,
+                    ]}
+                >
+                    <div className="d-flex justify-content-center mb-2">
+                        <Image preview={false} width='25%' src={selectedAssessor.image} />
+                    </div>
+                    <div dangerouslySetInnerHTML={{ __html: selectedAssessor?.profile }} />
+                </Modal>
             </Container>
         </>
     )
