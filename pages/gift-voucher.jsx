@@ -24,7 +24,7 @@ const GiftVoucher = () => {
                 <Row>
                     <Col xs={12} md={6}>
                         <Slide triggerOnce direction='up' fraction={0.5} delay={50}>
-                            <img src="/assets/images/twinbrain-gift-voucher.jpg" width="100%" />
+                            <Image placeholder={<Spin />} preview={false} src="/assets/images/twinbrain-gift-voucher.jpg" width="100%" />
                         </Slide>
                     </Col>
                     <Col xs={12} md={6}>
@@ -33,8 +33,6 @@ const GiftVoucher = () => {
                             </h4>
                             <p>
                                 You can give a family member, a friend or someone the gift of well-being, self-development or professional development. Do this by buying therapy sessions, training courses or other services offered by TwinBrain. Subject to availability, the person receiving your gift voucher can receive a service from TwinBrain via face to face in our London venus or anywhere in the World via phone, Online or other facilities like Whatsapp, Skype, and Zoom.
-
-
                             </p>
                             <p><a href="/contact-us">Contact Us</a> for details.</p>
                         </Slide>

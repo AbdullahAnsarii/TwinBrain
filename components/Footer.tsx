@@ -55,7 +55,7 @@ const Footer = () => {
                                         <li><a href="/keeping-you-safe"><CaretRightFilled style={{fontSize: 18}} />Keep You Safe</a></li>
                                         <li><a href="/my-account"><CaretRightFilled style={{fontSize: 18}} />My Account</a></li>
                                         <li><a href="/disclaimer"><CaretRightFilled style={{fontSize: 18}} />Disclaimer</a></li>
-                                        <li><a href="/term-and-conditions"><CaretRightFilled style={{fontSize: 18}} />Terms and Conditions</a></li>
+                                        <li><a href="/terms-and-conditions"><CaretRightFilled style={{fontSize: 18}} />Terms and Conditions</a></li>
                                     </ul>
 
 
