@@ -17,7 +17,7 @@ export const navbarItems: { text: string, url: string, subItems: { text: string,
     { text: "My Account", url: "my-account", subItems: [] },
     {
         text: "Explore More", url: "", subItems: [
-            { text: "Gift Vouchers", url: "/gift-vouchers" },
+            { text: "Gift Vouchers", url: "/gift-voucher" },
             { text: "How To Pay", url: "how-to-pay" }
         ]
     },
