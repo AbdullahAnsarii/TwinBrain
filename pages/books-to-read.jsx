@@ -1,13 +1,12 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Head from "next/head";
 import styles from '../styles/Books.module.scss';
-import { Breadcrumb, Card, Image, Spin } from "antd";
-import Link from "next/link";
+import { Breadcrumb, Card} from "antd";
 import router from "next/router";
-import { ArrowRightOutlined, CheckOutlined, LinkOutlined, SettingFilled } from "@ant-design/icons";
+import { LinkOutlined} from "@ant-design/icons";
 import { Slide } from "react-awesome-reveal";
 const { Meta } = Card;
-const AboutUs = () => {
+const Books = () => {
     return (
         <>
             <Head>
@@ -79,4 +78,4 @@ const AboutUs = () => {
     )
 }
 
-export default AboutUs;
+export default Books;
