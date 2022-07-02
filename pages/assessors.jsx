@@ -35,22 +35,25 @@ const Assessors = () => {
             <Container className="my-5">
                 <Row>
                     {assessors.map(assessor => (
+
                         <Col id={assessor.id} xs={12} sm={6} md={4}>
-                            <div className="our-team">
-                                <div className="picture">
-                                    <img className="img-fluid" src={assessor.image} />
+                            <Slide triggerOnce direction='up' fraction={0.5} delay={50 * assessor.id}>
+                                <div className="our-team">
+                                    <div className="picture">
+                                        <img className="img-fluid" src={assessor.image} />
+                                    </div>
+                                    <div className="team-content">
+                                        <h3 className="name">{assessor.name}</h3>
+                                        <h4 className="title">{assessor.title}</h4>
+                                    </div>
+                                    <ul className="social">
+                                        <li><a href="/"><FacebookFilled /></a></li>
+                                        <li><a href="/"><TwitterOutlined /></a></li>
+                                        <li><a href="/"><LinkedinFilled /></a></li>
+                                    </ul>
+                                    <Button id={assessor.id} className="mb-3" type='primary' onClick={handleDetails}>View Details</Button>
                                 </div>
-                                <div className="team-content">
-                                    <h3 className="name">{assessor.name}</h3>
-                                    <h4 className="title">{assessor.title}</h4>
-                                </div>
-                                <ul className="social">
-                                    <li><a href="/"><FacebookFilled /></a></li>
-                                    <li><a href="/"><TwitterOutlined /></a></li>
-                                    <li><a href="/"><LinkedinFilled /></a></li>
-                                </ul>
-                                <Button id={assessor.id} className="mb-3" type='primary' onClick={handleDetails}>View Details</Button>
-                            </div>
+                            </Slide>
                         </Col>
                     ))}
                 </Row>
