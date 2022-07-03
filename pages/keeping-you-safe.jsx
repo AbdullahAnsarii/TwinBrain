@@ -22,8 +22,8 @@ const KeepingYouSafe = () => {
             </div>
             <Container className="my-5">
                 
-            <p><strong>Are you feeling suicidal, harming yourself (e.g. pulling hair, cutting, etc) or being bullied, in domestic violence, or at risk to yourself or to another person?</strong></p>
-                            <p><strong>If Yes,</strong>  contact and receive support from a Helpline you know, or from one of the organizations below.</p>
+            <h4 className="text-primary">Are you feeling suicidal, harming yourself (e.g. pulling hair, cutting, etc) or being bullied, in domestic violence, or at risk to yourself or to another person?</h4>
+                            <p><h3>If Yes,</h3>  contact and receive support from a Helpline you know, or from one of the organizations below.</p>
                             <p><strong>(a)  UK Residents:</strong></p>
                             <ul>
                                 <li><strong>Samaritans:</strong> 08457 909090. (24-hour crisis line for people contemplating harming themselves).Website: <a href="http://www.samaritans.org/" target="_blank">http://www.samaritans.org/</a>.</li>

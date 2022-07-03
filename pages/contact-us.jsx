@@ -9,7 +9,6 @@ import { Slide } from "react-awesome-reveal";
 const { TextArea } = Input;
 const ContactUs = () => {
     const onFinish = (values) => {
-
         console.log('Success:', values);
     };
 
