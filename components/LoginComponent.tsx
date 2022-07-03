@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
-import { LockOutlined, UserOutlined } from '@ant-design/icons';
+import { GoogleOutlined, LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Alert, Button, Card, Checkbox, Divider, Form, Input, message } from 'antd';
-import { logIn } from "../utility/authentication";
+import { logIn, logInWithGoogle } from "../utility/authentication";
 import Link from "next/link";
 
 const LoginComponent: FC = () => {
@@ -46,7 +46,7 @@ const LoginComponent: FC = () => {
     return (
         <Card className='w-100 h-100'>
             <div className="d-flex flex-column align-items-center">
-               
+
                 <img src="/assets/images/logo-tp.png" width="60%" />
                 <h3>Login</h3>
                 {errorMessage && <Alert
@@ -100,7 +100,13 @@ const LoginComponent: FC = () => {
                 </Form.Item>
 
                 <Divider>OR</Divider>
-
+                <Form.Item className="text-center">
+                    <Button onClick={async () => {
+                        await logInWithGoogle();
+                    }} icon={<GoogleOutlined style={{fontSize: 18}} />} block type="primary" danger loading={loading}>
+                        Sign In with Google
+                    </Button>
+                </Form.Item>
                 <Form.Item className="text-center">
                     Don't have an account?&nbsp;<Link href="/register">Sign Up</Link>
                 </Form.Item>
