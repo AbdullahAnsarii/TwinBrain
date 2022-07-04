@@ -201,6 +201,6 @@ a {
   color: var(--bs-primary);
   background-color: #f7f5ec;
 }
-.ant-form-item-required{
+/* .ant-form-item-required{
   color: white !important;
-}
+} */
