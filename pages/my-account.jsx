@@ -3,13 +3,14 @@ import LoginComponent from "../components/LoginComponent";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from '../utility/firebase';
 import Head from 'next/head';
-import { Spin } from 'antd';
+import { Button, Spin } from 'antd';
+import { logOut } from '../utility/authentication';
 
 const MyAccount = () => {
     const [user, loading, error] = useAuthState(auth);
     console.log(user, loading, error);
     if (loading) {
-        return  <Container style={{ marginTop: 300, marginBottom: 300, textAlign: 'center' }}><Spin size='large' /></Container>
+        return <Container style={{ marginTop: 300, marginBottom: 300, textAlign: 'center' }}><Spin size='large' /></Container>
     }
     return (
         <Container style={{ marginTop: 100, marginBottom: 100 }}>
@@ -19,7 +20,7 @@ const MyAccount = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            {user ? <h1>Signed in</h1> : <Row>
+            {user ? <h1>Signed in <Button type="primary" onClick={async () => await logOut()}>Sign Out</Button> </h1> : <Row>
                 <Col xs={12} md={6} className="d-none d-md-flex justify-content-end">
                     <img src="/assets/images/register.png" width="100%" />
                 </Col>
