@@ -32,7 +32,7 @@ const Assessors = () => {
                     <Breadcrumb.Item onClick={() => router.push("/assessors")}>Assessors</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
-            <Container className="my-5">
+            <Container className="py-5">
                 <Row>
                     {assessors.map(assessor => (
 

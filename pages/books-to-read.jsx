@@ -22,7 +22,7 @@ const Books = () => {
                     <Breadcrumb.Item onClick={() => router.push("/books-to-read")}>Books To Read</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
-            <Container className="my-5">
+            <Container className="py-5">
                 <Row>
                     <Col xs={12} md={6} className="my-2">
                         <Slide triggerOnce direction='up' fraction={0.5} delay={50}>

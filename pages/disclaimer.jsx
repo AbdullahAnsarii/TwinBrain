@@ -19,7 +19,7 @@ const Disclaimer = () => {
                     <Breadcrumb.Item onClick={() => router.push("/disclaimer")}>Disclaimer</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
-            <Container className="my-5">
+            <Container className="py-5">
                 <h2>DISCLAIMER, YOUR CONFIDENTIALITY AND YOUR CONSENT.  </h2>
 
                 <p><strong>(a) Time Duration:</strong>  I agreed that the self-screening may take up to 45 minutes to one hour or more. I can commence, save and complete my self-screening whenever it suits </p>

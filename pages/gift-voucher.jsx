@@ -20,7 +20,7 @@ const GiftVoucher = () => {
                     <Breadcrumb.Item onClick={() => router.push("/gift-voucher")}>Gift Vouchers</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
-            <Container className="my-5">
+            <Container className="py-5">
                 <Row>
                     <Col xs={12} md={6}>
                         <Slide triggerOnce direction='up' fraction={0.5} delay={50}>

@@ -22,7 +22,7 @@ const AboutUs = () => {
                     <Breadcrumb.Item onClick={() => router.push("/about-us")}>About Us</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
-            <Container className="my-5">
+            <Container className="py-5">
                 <Row className="my-5">
                     <h1 className="text-center">Assessment Service</h1>
                     <Col xs={12} md={6}>

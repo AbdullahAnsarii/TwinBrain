@@ -30,7 +30,7 @@ const ContactUs = () => {
                     <Breadcrumb.Item onClick={() => router.push("/contact-us")}>Contact Us</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
-            <Container className="my-5">
+            <Container className="py-5">
                 <Row className="my-5">
                     <Col xs={12} md={6}>
                         <Slide triggerOnce fraction={1} direction="up">

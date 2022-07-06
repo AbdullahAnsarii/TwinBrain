@@ -20,7 +20,7 @@ const KeepingYouSafe = () => {
                     <Breadcrumb.Item onClick={() => router.push("/keeping-you-safe")}>Keeping You Safe</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
-            <Container className="my-5">
+            <Container className="py-5">
                 
             <h4 className="text-primary">Are you feeling suicidal, harming yourself (e.g. pulling hair, cutting, etc) or being bullied, in domestic violence, or at risk to yourself or to another person?</h4>
                             <p><h3>If Yes,</h3>  contact and receive support from a Helpline you know, or from one of the organizations below.</p>

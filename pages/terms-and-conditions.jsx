@@ -19,7 +19,7 @@ const Terms = () => {
                     <Breadcrumb.Item onClick={() => router.push("/terms-and-conditions")}>Terms & Conditions</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
-            <Container className="my-5">
+            <Container className="py-5">
 
                 <h2 className="text-center mb-6">BY BOOKING I ACCEPT THE FOLLOWING:</h2>
 

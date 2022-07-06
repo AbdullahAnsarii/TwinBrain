@@ -21,7 +21,7 @@ const HowToPay = () => {
                     <Breadcrumb.Item onClick={() => router.push("/how-to-pay")}>How To Pay</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
-            <Container className="my-5">
+            <Container className="py-5">
 
                 <Descriptions title="Paying Fees and Terms" size="small" bordered column={1}>
                     <Descriptions.Item label="Payments">We offer a number of ways to help you pay for your services with TwinBrain</Descriptions.Item>

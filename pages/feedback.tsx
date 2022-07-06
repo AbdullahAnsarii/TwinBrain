@@ -1,16 +1,35 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Head from "next/head";
 import styles from '../styles/Feedback.module.scss';
-import { Breadcrumb, Form, Input, Button } from "antd";
+import { Breadcrumb, Form, Input, Button, Alert } from "antd";
 import router from "next/router";
+import { useState } from "react";
+import { postFeedback } from "../utility/feedback";
 const { TextArea } = Input;
 const Feedback = () => {
-    const onFinish = (values) => {
+    const [loading, setLoading] = useState(false);
+    const [finishMessage, setFinishMesage] = useState("");
 
-        console.log('Success:', values);
+    const onFinish = async (values: { name: string, email: string, phone: string, feedback: string }) => {
+        setLoading(true);
+        postFeedback(values.name, values.email, values.phone, values.feedback)
+            .then(() => {
+                setFinishMesage("Success, your feedback is received successfully.");
+                setLoading(false);
+                setTimeout(() => {
+                    setFinishMesage("");
+                }, 3500);
+            })
+            .catch((err) => {
+                setFinishMesage("Error, Something bad happened. Please try again.");
+                setLoading(false);
+                setTimeout(() => {
+                    setFinishMesage("");
+                }, 3500);
+            })
     };
 
-    const onFinishFailed = (errorInfo) => {
+    const onFinishFailed = (errorInfo: {}) => {
         console.log('Failed:', errorInfo);
     };
     return (
@@ -28,9 +47,15 @@ const Feedback = () => {
                     <Breadcrumb.Item onClick={() => router.push("/feedback")}>Feedback</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
-            <Container className="my-5">
+            <Container className="py-5">
+                {finishMessage && <div className="d-flex justify-content-center"><Alert
+                    className="mb-2 w-75"
+                    description={finishMessage}
+                    type={finishMessage.includes("Success") ? "success" : "error"}
+                    showIcon
+                /></div>}
                 <Form
-                    name="basic"
+                    name="feedback"
                     labelCol={{ span: 4 }}
                     wrapperCol={{ span: 16 }}
                     initialValues={{ remember: true }}
@@ -70,7 +95,7 @@ const Feedback = () => {
                     </Form.Item>
 
                     <Form.Item wrapperCol={{ offset: 4, span: 30 }}>
-                        <Button type="primary" htmlType="submit">
+                        <Button loading={loading} type="primary" htmlType="submit">
                             Submit
                         </Button>
                     </Form.Item>
