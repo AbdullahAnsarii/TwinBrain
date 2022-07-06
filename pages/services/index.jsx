@@ -31,6 +31,7 @@ const Services = () => {
                                     <img src="https://img.icons8.com/color-glass/96/000000/mental-health.png" />
                                     <h5>Free Self-Assessment</h5>
                                 </div>
+                               
                             </Card>
                         </Slide>
                     </Col>

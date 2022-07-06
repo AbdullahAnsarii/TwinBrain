@@ -6,7 +6,7 @@ import { CaretRightFilled, EnvironmentFilled, FacebookFilled, LinkedinFilled, Ph
 const Footer = () => {
     const router = useRouter()
     return(
-        <footer className='pt-5' style={{background: "#e6e6e6", bottom: 0 }}>
+        <footer style={{background: "#e6e6e6", bottom: 0 }}>
             <section>
                 <div className="container ">
 
