@@ -24,7 +24,7 @@ const Services = () => {
             </div>
             <Container className="my-5">
                 <Row id={styles.assessment} className='my-3'>
-                    <Col xs={12} md={3} className="d-flex justify-content-end my-5">
+                    <Col xs={12} md={3} className="d-flex justify-content-center my-5">
                         <Slide triggerOnce direction='up' fraction={1}>
                             <Card onClick={() => router.push("/services/free-self-assessment")} className={styles.assessmentCard} bordered={true} hoverable={true}>
                                 <div>
@@ -35,7 +35,7 @@ const Services = () => {
                             </Card>
                         </Slide>
                     </Col>
-                    <Col xs={12} md={3} className="d-flex justify-content-start my-5">
+                    <Col xs={12} md={3} className="d-flex justify-content-center my-5">
                         <Slide triggerOnce direction='up' fraction={1} delay={200}>
                             <Card onClick={() => router.push("/services/paid-assessment")} className={styles.assessmentCard} bordered={true} hoverable={true}>
                                 <div>
@@ -45,7 +45,7 @@ const Services = () => {
                             </Card>
                         </Slide>
                     </Col>
-                    <Col xs={12} md={3} className="d-flex justify-content-end my-5">
+                    <Col xs={12} md={3} className="d-flex justify-content-center my-5">
                         
                         <Slide triggerOnce direction='up' fraction={1} delay={400}>
                         <a href="https://twinbrain.org/" target="_blank">
@@ -56,7 +56,7 @@ const Services = () => {
                             </a>
                         </Slide>
                     </Col>
-                    <Col xs={12} md={3} className="d-flex justify-content-start my-5">
+                    <Col xs={12} md={3} className="d-flex justify-content-center my-5">
                         <Slide triggerOnce direction='up' fraction={1} delay={600}>
                             <a href='https://cbt.healthbj-uk.org/' target="_blank">
                             <Card className={styles.assessmentCard} bordered={true} hoverable={true}>
@@ -66,7 +66,7 @@ const Services = () => {
                             </a>
                         </Slide>
                     </Col>
-                    <Col xs={12} md={3} className="d-flex justify-content-end my-5">
+                    <Col xs={12} md={3} className="d-flex justify-content-center my-5">
                         <Slide triggerOnce direction='up' fraction={1}>
                             <a href="https://counselling.healthbj-uk.org/" target="_blank">
                             <Card className={styles.assessmentCard} bordered={true} hoverable={true}>
@@ -76,7 +76,7 @@ const Services = () => {
                             </a>
                         </Slide>
                     </Col>
-                    <Col xs={12} md={3} className="d-flex justify-content-start my-5">
+                    <Col xs={12} md={3} className="d-flex justify-content-center my-5">
                         <Slide triggerOnce direction='up' fraction={1} delay={200}>
                             <a href="https://coupletherapy.healthbj-uk.org/" target="_blank">
                             <Card className={styles.assessmentCard} bordered={true} hoverable={true}>
@@ -96,7 +96,7 @@ const Services = () => {
                             </a>
                         </Slide>
                     </Col>
-                    <Col xs={12} md={3} className="d-flex justify-content-start my-5">
+                    <Col xs={12} md={3} className="d-flex justify-content-center my-5">
                         <Slide triggerOnce direction='up' fraction={1} delay={600}>
                             <a href="https://eap.healthbj-uk.org/" target="_blank">
                             <Card className={styles.assessmentCard} bordered={true} hoverable={true}>
