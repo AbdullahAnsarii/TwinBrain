@@ -32,20 +32,22 @@ a {
   /* background: var(--bs-info) !important; */
 }
 #header a {
-  color: var(--bs-primary);
+  font-weight: bold;
+  /* color: var(--bs-primary); */
 }
 
 #header span {
-  color: var(--bs-primary);
+  font-weight: bold;
+  /* color: var(--bs-primary); */
 }
 
-#header span:hover {
+/* #header span:hover {
   color: var(--bs-info);
-}
+} */
 
-#header a:hover {
+/* #header a:hover {
   color: var(--bs-info) !important;
-}
+} */
 
 .navbar-nav {
   align-items: center;

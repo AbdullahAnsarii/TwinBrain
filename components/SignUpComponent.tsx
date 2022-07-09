@@ -127,7 +127,7 @@ const SignUpComponent: FC = () => {
                 <Form.Item
                     label="Email"
                     name="email"
-                    rules={[{ required: true, message: 'Please input your Email!' }]}
+                    rules={[{ required: true, type: 'email', message: 'Please input your Email with proper formatting!' }]}
                 >
                     <Input />
                 </Form.Item>
@@ -136,7 +136,7 @@ const SignUpComponent: FC = () => {
                     name="phone"
                     rules={[{ required: true, message: 'Please input your Phone#!' }]}
                 >
-                    <Input />
+                    <Input type="tel"  />
                 </Form.Item>
                 <Form.Item
                     name="password"
