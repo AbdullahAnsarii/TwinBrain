@@ -29,7 +29,7 @@ const Header = () => {
                             {navbarItem.subItems.map((subItem, index) => (
                                 <Menu.Item onClick={() => router.push({
                                     pathname: subItem.url
-                                })} key={index} id="header-dropdown-items">
+                                })} key={subItem.url} id="header-dropdown-items">
                                     {subItem.text}
                                 </Menu.Item>
                             ))}
