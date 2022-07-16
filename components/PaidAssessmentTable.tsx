@@ -18,8 +18,8 @@ const PaidAssessmentTable:FC = () => {
                 {paidAssessments.map(assessment => (
                     <tr>
                         <td style={{width: '50%', padding: 20}}>{assessment.type}</td>
-                        <td style={{width: '25%', textAlign: 'center', padding: 20}}><h4>&euro;{assessment.priceOnsite}</h4><Button shape='round' type='primary'>Book Now</Button></td>
-                        <td style={{width: '25%', textAlign: 'center', padding: 20}}><h4>&euro;{assessment.priceRemote}</h4><Button shape='round' type='primary'>Book Now</Button></td>
+                        <td style={{width: '25%', textAlign: 'center', padding: 20}}><h4>&#163;{assessment.priceOnsite}</h4><Button shape='round' type='primary'>Book Now</Button></td>
+                        <td style={{width: '25%', textAlign: 'center', padding: 20}}><h4>&#163;{assessment.priceRemote}</h4><Button shape='round' type='primary'>Book Now</Button></td>
                     </tr>
                 ))}
             </tbody>
