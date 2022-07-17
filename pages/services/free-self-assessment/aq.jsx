@@ -6,9 +6,6 @@ import router from "next/router";
 import { useState } from "react";
 
 export const getStaticProps = () => {
-    //type0 = no score
-    //type1 = score on agree
-    //type2 = score on disagree
     const questions = [
         {
             title: "1. I prefer to do things with others rather than on my own.",
