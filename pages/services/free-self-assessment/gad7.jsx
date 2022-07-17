@@ -1,11 +1,8 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import Head from "next/head";
 import styles from '../../../styles/FreeSelfAssessment.module.scss';
-import { Breadcrumb, Card, Button, Form, Radio } from "antd";
+import { Breadcrumb, Button, Form, Radio } from "antd";
 import router from "next/router";
-import { Slide } from "react-awesome-reveal";
-import { freeQuestionnaires } from "../../../data/freeQuestionnaires";
-import Link from "next/link";
 import { useState } from "react";
 
 const GAD7 = () => {
