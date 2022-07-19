@@ -63,5 +63,15 @@ export const freeQuestionnaires: { name: string, url: string, type: string }[] =
         name: 'MDQ: Assesses depression.',
         url: '/services/free-self-assessment/mdq',
         type: 'optional'
-    }
+    },
+    {
+        name: 'Depression Anxiety Stress Scale (DASS21)',
+        url: '/services/free-self-assessment/dass21',
+        type: 'optional'
+    },
+    {
+        name: 'Edinburgh Postnatal Depression Scale (EPDS).',
+        url: '/services/free-self-assessment/epds',
+        type: 'optional'
+    },
 ]
