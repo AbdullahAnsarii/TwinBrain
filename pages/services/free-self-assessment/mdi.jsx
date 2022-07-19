@@ -8,88 +8,60 @@ import { useState } from "react";
 export const getStaticProps = () => {
     const questions = [
         {
-            title: "I think about this person so much that it’s hard for me to do the things I normally do.",
+            title: "1. Have you felt low in spirits or sad?",
             id: 1
         },
         {
-            title: "2. Memories of the person who died upset me.",
+            title: "2. Have you lost interest in your daily activities?",
             id: 2
         },
         {
-            title: "3. I cannot accept the death of the person who died.",
+            title: "3. Have you felt lacking in energy and strength?",
             id: 3
         },
         {
-            title: "4. I feel myself longing for the person who died.",
+            title: "4. Have you felt less self-confident?",
             id: 4
         },
         {
-            title: "5. I feel drawn to places and things associated with the person who died.",
+            title: "5. Have you had a bad conscience or feelings of guilt?",
             id: 5
         },
         {
-            title: "6. I can’t help feeling angry about his/her death.",
+            title: "6. Have you felt that life wasn’t worth living?",
             id: 6
         },
         {
-            title: "7. I feel disbelief over what happened.",
+            title: "7. Have you had difficulty in concentrating?",
             id: 7
         },
         {
-            title: "8. I feel stunned or dazed over what happened.",
+            title: "8. Have you felt very restless?",
             id: 8
         },
         {
-            title: "9. Ever since s/he died it is hard for me to trust people.",
+            title: "9. Have you felt subdued or slowed down?",
             id: 9
         },
         {
-            title: "10. Ever since s/he died I feel like I have lost the ability to care about other people or I feel distant from people I care about.",
+            title: "10. Have you had trouble sleeping at night?",
             id: 10
         },
         {
-            title: "11. I have pain in the same area of my body or I have some of the same symptoms as the person who died.",
+            title: "11. Have you suffered from reduced appetite?",
             id: 11
         },
         {
-            title: "12. I go out of my way to avoid reminders of the person who died.",
+            title: "12. Have you suffered from increased appetite?",
             id: 12
-        },
-        {
-            title: "13. I feel that life is empty without the person who died.",
-            id: 13
-        },
-        {
-            title: "14. I hear the voice of the person who died speak to me.",
-            id: 14
-        },
-        {
-            title: "15. I see the person who died stand before me.",
-            id: 15
-        },
-        {
-            title: "16. I feel that it is unfair that I should live when this person died.",
-            id: 16
-        },
-        {
-            title: "17. I feel bitter over this person’s death.",
-            id: 17
-        },
-        {
-            title: "18. I feel envious of others who have not lost someone close.",
-            id: 18
-        },
-        {
-            title: "19. I feel lonely a great deal of the time ever since s/he died.",
-            id: 19
-        },
+        }
     ]
     return {
         props: { questions }
     }
 }
 
-const CGI = ({ questions }) => {
+const MDI = ({ questions }) => {
     //issue with scoring
     const [score, setScore] = useState(0);
     const [showResult, setShowResult] = useState(false);
@@ -103,24 +75,24 @@ const CGI = ({ questions }) => {
     return (
         <>
             <Head>
-                <title>Complicated Grief Inventory</title>
-                <meta name="description" content="Complicated Grief Inventory | Twin Brain" />
+                <title>Major Depression Inventory (MDI)</title>
+                <meta name="description" content="Major Depression Inventory (MDI) | Twin Brain" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={styles.parallax}>
-                <h1>Complicated Grief Inventory</h1>
+                <h1>Major Depression Inventory (MDI)</h1>
                 <Breadcrumb className={styles.breadcrumb}>
                     <Breadcrumb.Item onClick={() => router.push("/")}>Home</Breadcrumb.Item>
                     <Breadcrumb.Item onClick={() => router.push("/services")}>Services</Breadcrumb.Item>
                     <Breadcrumb.Item onClick={() => router.push("/services/free-self-assessment")}>Free Self Assessment</Breadcrumb.Item>
-                    <Breadcrumb.Item onClick={() => router.push("/services/free-self-assessment/cgi")}>Complicated Grief Inventory</Breadcrumb.Item>
+                    <Breadcrumb.Item onClick={() => router.push("/services/free-self-assessment/MDI")}>Major Depression Inventory (MDI)</Breadcrumb.Item>
                 </Breadcrumb>
             </div>
             <Container className="py-5">
                 <Row className={styles.questionnaire}>
                     <Form
-                        name="cgi"
+                        name="DSM5"
                         labelCol={{ span: 4 }}
                         wrapperCol={{ span: 16 }}
                         initialValues={{ remember: true }}
@@ -128,8 +100,8 @@ const CGI = ({ questions }) => {
                         autoComplete="off"
                         scrollToFirstError={true}
                     >
-                        <h4>Complicated Grief Inventory</h4>
-                        <p>In the past 7 days...</p>
+                        <h4>Major Depression Inventory (MDI)</h4>
+                        <p>Over the last two weeks, how often have you been bothered by any of the following problems?</p>
 
                         {questions.map(ques =>
                         (<Row key={ques.id} className={styles.question}>
@@ -141,10 +113,11 @@ const CGI = ({ questions }) => {
                             >
                                 <Radio.Group id={ques.id}>
                                     <Radio value={0}>Never</Radio>
-                                    <Radio value={1}>Rarely</Radio>
-                                    <Radio value={2}>Sometimes</Radio>
-                                    <Radio value={3}>Often</Radio>
-                                    <Radio value={4}>Always</Radio>
+                                    <Radio value={1}>Some Of Them Time</Radio>
+                                    <Radio value={2}>Slightly Less Than Half The Time</Radio>
+                                    <Radio value={3}>Slightly More Than Half The Time</Radio>
+                                    <Radio value={4}>Most Of The Time</Radio>
+                                    <Radio value={5}>All The Time</Radio>
                                 </Radio.Group>
                             </Form.Item>
                         </Row>))}
@@ -157,11 +130,9 @@ const CGI = ({ questions }) => {
                             </Form.Item>
                         </Row>
                         {showResult && <Row className={styles.button}>
-                            <h6>You scored {score}</h6>
-                            <p className='text-muted text-center' >The score ranges are as follows:
-                                0-24 –Experiencing Normal grief
-                                25 -30 –On the Complicated Grief Threshold
-                                30-76 – Strong Indication of Complicated Grief
+                            <h6>You scored {score} out of 60</h6>
+                            <p className='text-muted text-center' >
+                            Higher scores indicate more severe depression.
                             </p>
                         </Row>}
                     </Form>
@@ -171,4 +142,4 @@ const CGI = ({ questions }) => {
     )
 }
 
-export default CGI;
+export default MDI;
