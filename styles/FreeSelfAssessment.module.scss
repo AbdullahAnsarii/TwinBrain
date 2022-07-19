@@ -22,6 +22,14 @@ $secondary: rgb(8, 35, 102);
     color: #fff;
     font-size: 5vw
 }
+.parallax h3{
+    position: absolute;
+    padding-top: 15vw;
+    padding-left: 16vw;
+    padding-bottom: 10vw;
+    color: #fff;
+    font-size: 3vw
+}
 
 .parallax {
     box-shadow: inset 0 0 0 1000px rgba(24, 144, 255, 0.4);
@@ -114,7 +122,14 @@ $secondary: rgb(8, 35, 102);
         padding-top: 30vw;
         font-size: 8vw;
     }
-
+    .parallax h3{
+        position: absolute;
+        padding-top: 15vw;
+        padding-left: 16vw;
+        padding-bottom: 10vw;
+        color: #fff;
+        font-size: 6vw
+    }
     .breadcrumb {
         font-size: larger;
         padding-top: 40vw;
