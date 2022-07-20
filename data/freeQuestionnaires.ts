@@ -74,4 +74,14 @@ export const freeQuestionnaires: { name: string, url: string, type: string }[] =
         url: '/services/free-self-assessment/epds',
         type: 'optional'
     },
+    {
+        name: 'Young Mania Rating Scale (YMRS)',
+        url: '/services/free-self-assessment/ymrs',
+        type: 'optional'
+    },
+    {
+        name: 'Altman Self-Rating Mania Scale (ASRM)',
+        url: '/services/free-self-assessment/asrm',
+        type: 'optional'
+    },
 ]
